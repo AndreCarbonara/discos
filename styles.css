@@ -1,0 +1,41 @@
+/* Estilo para o carregamento */
+#loading {
+    display: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Imagem do álbum com tamanho fixo */
+.album-cover {
+    cursor: pointer;
+    margin: 10px;
+    width: 400px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+/* Para telas maiores que 768px (2 colunas) */
+@media (min-width: 768px) {
+    .album-row {
+        display: grid;
+        grid-template-columns: repeat(2, auto); /* 2 colunas com largura automática */
+        gap: 15px; /* Espaço entre colunas */
+    }
+}
+
+/* Para telas menores que 768px (1 coluna) */
+@media (max-width: 767px) {
+    .album-row {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 coluna ocupando toda a largura */
+        gap: 15px; /* Espaço entre itens */
+        justify-content: center; /* Centraliza os elementos em telas pequenas */
+    }
+}
+
+/* Cor de fundo da página */
+body {
+    background-color: #8FBC8F; /* Cor verde-azulada */
+    margin: 0; /* Remove qualquer margem padrão */
+    font-family: Arial, sans-serif; /* Definindo a fonte padrão */
+}
